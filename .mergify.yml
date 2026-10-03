@@ -1,0 +1,20 @@
+scopes:
+  source:
+    manual:
+
+merge_queue:
+  max_parallel_checks: 1
+  skip_intermediate_results: false
+  mode: isolated
+
+queue_rules:
+  - name: vm4-jenkins-multicommit-scope-261004
+    batch_size: 1
+    batch_max_wait_time: 2 sec
+    queue_conditions:
+      - title = VM4 JENKINS MULTICOMMIT SCOPE 261004
+      - scope = benign-scope
+      - -scope = protected-scope
+    merge_conditions:
+      - check-success = vm4-never-jenkins-scope-261004
+    merge_method: merge
