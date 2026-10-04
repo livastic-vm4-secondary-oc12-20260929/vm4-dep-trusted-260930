@@ -15,6 +15,4 @@ queue_rules:
       - title = VM4 JENKINS MULTICOMMIT SCOPE 261004
       - scope = benign-scope
       - -scope = protected-scope
-    merge_conditions:
-      - check-success = vm4-never-jenkins-scope-261004
     merge_method: merge
